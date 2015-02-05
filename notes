@@ -1,0 +1,32 @@
+Spark build :
+
+export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
+export JAVA_HOME="..."
+export PATH=$JAVA_HOME/bin:$PATH
+mvn -DskipTests clean package
+
+Running Spark from local build : 
+export JAVA_HOME, PATH as above.
+
+chmod +x ./bin/* to avoid the permission denied exception 
+dos2unis ./bin/* (This is needed as the git checkout is happening in windows box)
+
+To resolve the exception "Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletResponse"
+Download java servlet-api.jar version 3.0. And set SPARK_DIST_CLASSPATH to that jar file.
+
+
+JIRA : 
+https://issues.apache.org/jira/browse/SPARK
+
+Spark Review :  
+
+Git Steps:
+
+Spark Repository : https://github.com/apache/spark
+
+Pass      JIRA  : iw....
+          Github: gmail old.
+
+
+
+
