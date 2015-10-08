@@ -20,13 +20,43 @@ https://issues.apache.org/jira/browse/SPARK
 
 Spark Review :  
 
-Git Steps:
+Git Steps for spark:
+git clone https://github.com/svvenkat/spark
+git remote -v 
+git remote add upstream https://github.com/apache/spark
+git remote -v # lists the origin and upstream
+
+Synching the local
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+If merge is giving modified files and we don't need the modification then
+git stash save --keep-index
+git stash drop 
+git merge upstream/master
+
+
 
 Spark Repository : https://github.com/apache/spark
 
 Pass      JIRA  : iw....
           Github: gmail old.
 
+
+
+SBT Install : 
+
+If the build/sbt fails then mostly the sbt-lauch-0.13.7.jar is corrup.
+open ./build/sbt-launch-lib.bash and find the URI1 and URL1. Try downloading 
+the specfic sbt-launch.jar and copy under build directory as 
+sbt-launch-0.13.7.jar. 
+Link for the same is : http://stackoverflow.com/questions/31637752/building-apache-spark-using-sbt-invalid-or-corrupt-jarfile
+
+In some unix RHEL version the curl version is old then some of the downloads will not work. Will get an ssl error for curl https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.7/ivys/ivy.xml. For this download latest curl source and build it. Then point LD_LIBRARY_PATH to point to the lib/.libs/ directory of the build which has libcurl.
+
+
+Building in Windows using Intellij : 
 
 
 
