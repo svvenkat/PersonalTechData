@@ -52,11 +52,45 @@ open ./build/sbt-launch-lib.bash and find the URI1 and URL1. Try downloading
 the specfic sbt-launch.jar and copy under build directory as 
 sbt-launch-0.13.7.jar. 
 Link for the same is : http://stackoverflow.com/questions/31637752/building-apache-spark-using-sbt-invalid-or-corrupt-jarfile
-
-In some unix RHEL version the curl version is old then some of the downloads will not work. Will get an ssl error for curl https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.7/ivys/ivy.xml. For this download latest curl source and build it. Then point LD_LIBRARY_PATH to point to the lib/.libs/ directory of the build which has libcurl.
+In some unix RHEL version the curl version is old then some of the downloads will not work. Will get an ssl error for curl https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.7/ivys/ivy.xml. For this download latest curl source and build it. Then point LD_LIBRARY_PATH to point to the lib/.libs/ directory of the build which has libcurl. 
+THE ABOVE STEPS DID NOT HELP. SO USED WINDOWS SETUP.
 
 
 Building in Windows using Intellij : 
+Building the Spark project using mvn
+1. Install Maven 3.3.3
+2. Configure Intellij MVN to point to 3.3.3. Otherwise Spark 
+
+3. New->Project From Version Control 
+           Specify the details for you github.com/svvenkat/spark
+4. After checked out, Run Intellji MVN Tool and add the new spark
+project as the mvn project (by clicking + symbol)
+5. In the Intellji MVN Tool click "Execute MVN Goal" button and specifiy
+   mvn -DskipTests clean package
+6. This should build Spark
+
+
+Building a standalone Spark scala application using sbt.
+
+1. Install the Scala plugin
+2. Install SBT plugin - This is needed to generate the jar file out of the 
+   SBT project
+3. New->Project Select Scala and then SBT and create the project
+4. Edit build.sbt file and add the following lines.
+       name := "MySparkTestPrograms"
+       version := "1.0"
+       scalaVersion := "2.11.7"
+       libraryDependencies += "org.apache.spark" %% "spark-core" % "1.5.1"
+       mainClass in Compile := Some("myTest.class")
+5. In the Intellij SBT Tool click on refresh. This should get all the Spark
+   jars as dependency jars
+6. Create a scala file and Build it to check there are no errors.
+7. Start SBT Console
+     Type package
+8. Take the jar file generated under target folder.
+ 
+    
+
 
 
 
