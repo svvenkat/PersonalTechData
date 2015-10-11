@@ -1,0 +1,1 @@
+scala -Xprint:typer -> gives the type of results.
