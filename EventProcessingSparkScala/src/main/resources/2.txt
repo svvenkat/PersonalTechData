@@ -1,0 +1,7 @@
+{"purchaser" : 10, "productId" : 3}
+{"purchaser" : 11, "productId" : 2}
+{"purchaser" : 12, "productId" : 1}
+{"purchaser" : 10, "productId" : 3}
+{"purchaser" : 11, "productId" : 2}
+{"purchaser" : 1, "productId" : 3}
+{"purchaser" : 11, "productId" : 212}

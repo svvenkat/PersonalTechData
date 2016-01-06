@@ -1,0 +1,10 @@
+{"name" : "Vivek1", "Id" : 10, "age" : 20, "address" : "My Address1"}
+"name" : "Vivek", "Id" : 10, "age" : 20, "address" : "My Address"
+{"name" : "Vivek2", "Id" : 11, "age" : 21, "address" : "My Address2"}
+{"name" : "Vivek3", "Id" : 12, "age" : 22, "address" : "My Address3"}
+{"name" : "Shoes1", "desc" : "It is a Nike Shoe", Id : 1, price : 100}
+{"name" : "Shoes2", "desc" : "It is a Avis Shoe", Id : 2, price : 200}
+{"name" : "Shoes3", "desc" : "It is a woodland Shoe", Id : 3, price : 150}
+{"purchaser" : 10, "productId" : 3}
+{"purchaser" : 11, "productId" : 2}
+{"purchaser" : 12, "productId" : 1}

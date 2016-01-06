@@ -1,0 +1,10 @@
+{"name" : "Shoes1", "desc" : "It is a Nike Shoe", Id : 1, price : 200}
+{"name" : "Shoes2", "desc" : "It is a Avis Shoe", Id : 2, price : 400}
+{"name" : "Shoes3", "desc" : "It is a woodland Shoe", Id : 3, price : 300} 
+{"purchaser" : 10, "productId" : 3}
+{"purchaser" : 11, "productId" : 2}
+{"purchaser" : 12, "productId" : 1}
+{"purchaser" : 10, "productId" : 3}
+{"purchaser" : 11, "productId" : 2}
+{"purchaser" : 1, "productId" : 3}
+{"purchaser" : 11, "productId" : 212}
