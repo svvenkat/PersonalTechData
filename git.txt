@@ -1,0 +1,24 @@
+
+stage (index); commited. modified.
+untracked file.
+
+git reset HEAD <file> # unstage the changes (that is not added but not commited.
+git diff --staged or --cached (show the staged changes as well.)
+git tag
+git show <commit>|<branch> -> Shows a commit details or last commit in a branch.
+git descirbe - shows what for 
+git remote show <remoterepo> -> tells what are the branches set for pull.  Not sure if pull will pull for all the branches that is meant to be pulled. Or only the current branch.
+git stash save <comment>
+git stash apply stash{id} // Remember pop will change the id. so check the ids before apply (using list)
+git stash list
+git reflog // The reflog is only local changes. 
+git show HEAD@{5} //other options are HEAD^, HEAD^^, HEAD~,  .. and ... 
+	.. and ... are very important and useful
+
+reset : Resets the HEAD for a branch 
+rebase : Take a diff between common parent and commit-1 and apply the patch on commit-2. Is it good or bad? It makes the commit look linear. But erases the correct history. you decide?
+
+
+
+Anything that is commited can be recovered in git (even when the branch is
+	deleted).
